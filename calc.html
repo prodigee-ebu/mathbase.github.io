@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="beaut.css" media="all"/>
+        <title>Math assist</title>
+        <body>
+        <script type="text/javascript">
+            /* let welcome=window.prompt("What is your name")
+             document.write("Hi, "+ welcome)
+             if(welcome==""){
+                 document.write("User")
+                }
+                if(welcome==""){
+                    welcome="User"
+                }             
+             let tym=window.prompt("What time if the day is it?")
+             document.write("<br>Good "+tym)
+             if (tym=="") {
+                 document.write("Day")}
+             document.write("<br>I was written by Prod. Ebube to help you solve complex calculations") */
+
+            function solve(){
+                let number=document.getElementById("one").value;
+                if(number==""){
+                    alert(welcome+" please input the number")
+                }
+                if(number!=""){
+                    document.getElementById("far").innerHTML=number+" degrees Celsius is " + (9/5*number+32)+ " degrees Fahrenheit"
+                }            
+               /* if(number==100){
+                    document.write("<br><b><i>At this temperature water reaches its boiling point")
+                }
+                if(number>100){
+                    document.write("<br><b><i>Be aware that this temperature is higher than boiling point")
+                }
+                if(number<0){
+                    document.write("<br><b><i>Be aware that this temperature is less than freezing point")
+                }
+                if(number==0&number!=""){ 
+                    document.write("<br><b><i>At this temperature water reaches its freezing point")
+                 }*/
+            }
+            function time(){
+                let number=document.getElementById("two").value              
+                if(number==""){
+                    alert(welcome+" please input the number")
+                }else{
+                    document.getElementById("squ").innerHTML="The square of "+number+" is "+number*number
+                }
+            }
+            function shape(){
+                let number=document.getElementById("three").value
+                if(number==""){
+                    alert(welcome+" please input the number")
+                }
+                if(number<0){
+                    alert( "Negative numbers like "+number+ " are invalid ")
+                }
+                if(number>0){
+                    document.getElementById("sq").innerHTML=Math.sqrt(number)
+                }
+            }
+            function triangle(){
+                let a=document.getElementById("four").value
+                let b=document.getElementById("five").value
+                if(a==""&&b==""){
+                    alert(welcome+" please input the Base and Height")
+                }
+                if(b>0&&a>0){
+                    document.getElementById("tri").innerHTML="The area of a triangle whose base is "+a+" and height "+b+" is "+ 1/2 *a*b
+                }
+                if(a<0){
+                    alert("The Base is invalid")
+                }
+                if(b<0){
+                    alert("The Height is invalid")
+                }
+            }
+            function circle(){
+                let number=document.getElementById("six").value 
+                if(number==""){
+                    alert(welcome+" please input the number")
+                }
+                if(number<0){
+                    alert("Negative numbers are invalid")
+                }    
+                if(number>0){
+                    document.getElementById("circle").innerHTML="The area of a circle of radius "+number+" is "+ 22/7*number*number
+                }
+            }
+            
+            function far(){
+                let number=document.getElementById("seven").value
+                if(number==""){
+                    alert(welcome+" please input the number")
+                }
+                if(number!=""){
+                    document.getElementById("cel").innerHTML=number+" degrees Fahrenheit is "+(number-32)*5/9+" degrees Celsius"
+                }               
+              /*  if(number>212){
+                    document.write("<br><b><i>Be aware that this temperature is higher than boiling point")
+                }
+                if(number==212){
+                    document.write("<br><b><i>At this temperature water reaches its boiling point")
+                }
+                if(number==32){
+                    document.write("<br><b><i>At this temperature water reaches its freezing point")
+                }
+                if(number<32&number!=0){
+                    document.write("<br><b><i>Be aware that this temperature is less than freezing point")
+                }*/
+            }
+            function test(){
+            let car=document.getElementById("eight").value
+            if(car=="yes"){
+                document.getElementById("ans").innerHTML="Thank you we will make better projects in the future"
+            }
+            if (car=="no") {
+                document.getElementById("ans").innerHTML="Send me an E-mail about it"
+            }    
+            }
+            function spot(){
+                let number=document.getElementById("nine").value
+                if(number==""){
+                    alert(welcome+" please input a number")
+                }
+                if(number<0){
+                    alert("Negative numbers are invalid")
+                }
+                if(number>0){
+                    document.getElementById("sph").innerHTML="The area of a Sphere with radius "+number+" is "+ 4/3*22/7*number*number*number
+                }   
+                  
+            }
+            function trap( ){
+                let a=document.getElementById("ten").value
+                let b=document.getElementById("eleven").value 
+                let h=document.getElementById("twelve").value
+                var c= Number(a)+ Number(b)
+                var d=c/2
+                if(a==""||b==""||h==""){
+                    alert(welcome+" please input all the values")
+                }
+                if(a<0||b<0||h<0){
+                    alert("Negative numbers are invalid")
+                }
+                if(a>0&&b>0&&h>0){
+                    document.getElementById("trap").innerHTML="The area of a trapezium of sides "+a+" and "+b+" and height "+h+" is "+ d*h 
+                }
+
+            }                                                                                                            
+        </script>
+        <h3>Math base</h3>
+        <div class="card">
+        <h2 id="top">Celsius to Fahrenheit converter</h2>
+        <p>Temperature:<br>
+        <input type="number" class="yes" id="one" placeholder="Celsius">
+        <input type="button"  class="tyo" value="Convert" onclick=solve()> </p>
+        <p id="far"></p>
+    </div>
+    <div class="card">
+        <h2>Fahrenheit to celsius converter</h2>
+        <p>Temperature:<br>
+        <input type="number" class="yes" id="seven" placeholder="Fahrenheit">
+        <input type="button" class="tyo" value="Convert" onclick=far()> </p>
+        <p id="cel"></p>
+    </div>
+    <div class="card">
+        <h2>Squares of numbers</h2>
+        <p>Number:<br>
+        <input type="number" id="two" class="yes" placeholder="Number">
+        <input type="button"class="tyo" onclick=time() value="Find square"> </p>
+        <p id="squ"></p>
+    </div>
+    <div class="card">
+        <h2>Square root of numbers</h2>
+        <p>Number:<br>
+        <input type="number" placeholder="Number" class="yes" id="three">
+        <input type="button" class="tyo" value="Find square root" onclick=shape()></p>
+        <p id="sq"></p>
+    </div>
+    <div class="card">
+        <h2>Area of triangle</h2>
+        <p>Base:<br>
+        <input type="number" id="four" class="yes" placeholder="Base"></p>
+        <p>Height:<br>
+        <input type="number" id="five" class="yes" placeholder="Height">
+        <input type="button" class="tyo" value="Find area" onclick=triangle()></form></p>
+        <p id="tri"></p>
+    </div>
+    <div class="card">
+       <h2>Area of Trapezium</h2>
+        <input type="number" id="ten" placeholder="A" class="yes"><br>
+        <br>
+        <input type="number" id="eleven" placeholder="B" class="yes"><br></p> </p>   
+        <p>Height:<br>
+        <input type="number" id="twelve" placeholder="Height" class="yes">
+        <input type="button" class="tyo" onclick=trap() value="Find area">
+        </p>
+        <p id="trap"></p>
+    </div>
+    <div class="card">  
+        <h2>Area of circle</h2>
+        <p>Radius:<br>
+        <input type="number"  id="six" class="yes" placeholder="Radius">
+        <input type="button" value="Find area" class="tyo" onclick=circle()> </p>
+        <p id="circle"></p>
+    </div>
+    <div class="card">
+        <h2>Volume of sphere</h2>
+        <p>Radius:<br>
+        <input type="number" placeholder="Radius" id="nine" class="yes">
+        <input type="button" class="tyo" value="Find area" onclick=spot()></p>
+        <p id="sph"></p>
+    </div>                 
+        <h2>Did you like it</h2>
+        <p>Experience:<br>
+            <form>
+        <input type="text" id="eight" maxlength="3" class="yes"  placeholder="yes/no"> 
+        <input type="button" value="ok" class="tyo" onclick= test()>
+        <p id="ans"></p>
+    </form>
+    <p> Problem?
+        <a href="mailto:jegseun1976@gmail.com">Send me an email</a> </p>
+    
+        <h4><a href="looper.html" target="_blank">Check out our new project</a></h4>
+        <p class="arrow" ><a href="#top"  src="arrow.png" width="80" height="80" ></a></p>
+        </head>
+        </body>
+</html>

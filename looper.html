@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Looper</title>
+        <link rel="stylesheet" href="beaut.css" media="all">
+        <script type="text/javascript">
+        function play(){
+          let hide=document.getElementById("one").value
+          let game=document.getElementById("two").value
+         while(hide>0){
+            document.write(game+"<br>")
+            hide=hide-1
+         }
+        }   
+        </script>
+    </head>
+    <body>
+        <div class="card">
+        <h2>Looper</h2>
+        <p >Word and sentence replicator in less than a second</p>
+        <p>Your number:<br>
+            <input type="text" id="two" class="yes" placeholder="text"><br><br>
+            <input type="number" id="one" class="yes" placeholder="number of times">
+            <input type="submit" value="Replicate" class="tyo"  onclick=play()>
+        </p>
+        
+    </div>
+    <p id="dis"></p>
+    </body>
+</html>
